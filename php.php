@@ -19,6 +19,9 @@ $email = $password=  "";
   } else if (strlen($_POST["password"]) < 8){
     $response["status"]=" password should be >8 ";
   }
+  else if (!preg_match('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', $password)){
+    $response["status"]= "Password should contain at least one special letter";
+   }
   else if (!preg_match('/[A-Z]/', $_POST["password"])) {
    $response["status"]="Password should contain at least one uppercase letter";}
   
