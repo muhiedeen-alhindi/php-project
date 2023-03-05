@@ -17,5 +17,5 @@
     return $result;
 }
     
-  echo json_encode(ay_consonant($_GET['str']));
+  echo json_encode(ay_consonant($_POST['str']));
 ?>
